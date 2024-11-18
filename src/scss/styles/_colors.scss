@@ -1,0 +1,22 @@
+$white: #fff;
+$lightGray: #d9d9d9;
+$gray: #cecece;
+$darkBlue: #293344;
+$dark: #1d2532;
+$green: #c3f33b;
+$fadeGreen: rgba(224 255 172/5%);
+
+// gradients
+$greenGradient: linear-gradient(180deg, #1dd844 0%, #cbf62e 100%);
+$purpleGradient: radial-gradient(
+  95.38% 95.38% at 50.77% 4.62%,
+  #dea8ff 0%,
+  #9d6ad9 44.51%,
+  #7a2bf6 100%
+);
+$blueGradient: radial-gradient(
+  63.25% 73.53% at 65.32% 77.65%,
+  #045dfa 0%,
+  #0fc1d7 83.16%,
+  #06f6c7 100%
+);

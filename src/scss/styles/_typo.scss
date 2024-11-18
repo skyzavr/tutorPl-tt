@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+  font-family: 'WalsheimPro';
+  src: url('../../fonts/GTWalsheimPro-Medium.woff');
+  font-weight: 500;
+}
+
+// font vars
+$headerBigRegular: 72px/105% 'Inter', sans-serif;
+$headerBigBold: 600 72px/105% 'Inter', sans-serif;
+$headerSmallRegular: 25px/105% 'Inter', sans-serif;
+$headerSmallBold: 600 25px/105% 'Inter', sans-serif;
+$h2Big: 600 45px/130% 'Inter', sans-serif;
+$h2Small: 600 23px/130% 'Inter', sans-serif;
+$logo: 41px/120% 'Inter', sans-serif;
+$logoSmall: 20px/120% 'Inter', sans-serif;
+$body: 23px/120% 'Inter', sans-serif;
+$bodySmall: 18px/120% 'Inter', sans-serif;
+$buttonText: 500 16px 'Inter', sans-serif;
+$buttonGradientText: 500 20px/130% 'WalsheimPro', sans-serif;
+$link: 23px/120% 'Inter', sans-serif;
+$textBig: 19px/25px 'Inter', sans-serif;
+$textSmall: 16px/25px 'Inter', sans-serif;
