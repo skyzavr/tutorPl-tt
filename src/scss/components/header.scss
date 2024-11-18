@@ -1,0 +1,230 @@
+.header {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  max-width: 1280px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  & .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  & .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+
+    @media (min-width: $min) and (max-width: $max) {
+      padding-left: 20px;
+    }
+
+    & div {
+      width: 41px;
+      height: 41px;
+      margin-right: 10px;
+      transform: rotate(-25.73deg);
+
+      @media (min-width: $min) and (max-width: $max) {
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    & .logo__title {
+      font: $logo;
+      color: $white;
+
+      @media (min-width: $min) and (max-width: $max) {
+        font: $logoSmall;
+      }
+    }
+  }
+
+  & .nav {
+    & div:first-child {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+
+      @media (min-width: $min) and (max-width: $max) {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        top: 0;
+        transition: 0.4s;
+      }
+    }
+
+    @media (min-width: $min) and (max-width: $max) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 60px 25px;
+      border-radius: 0 0 0 30px;
+    }
+
+    & .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media (min-width: $min) and (max-width: $max) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      & .list__elem {
+        margin-right: 105px;
+
+        @media (min-width: $min) and (max-width: $max) {
+          margin-right: 0;
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & a {
+          color: $gray;
+          font: $link;
+          transition: $colorTrans;
+        }
+
+        & a:hover {
+          color: $green;
+          transition: $colorTrans;
+        }
+      }
+    }
+  }
+
+  & button {
+    margin-left: 150px;
+    margin-top: 0;
+
+    @media (min-width: $min) and (max-width: $max) {
+      margin-left: 0;
+      margin-top: 96px;
+      transition: 0.4s;
+    }
+  }
+
+  & .burger-menu {
+    transition: $allTrans;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: $max) {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & .line {
+      width: 70px;
+      height: 5px;
+      background-color: $white;
+      border-radius: 10px;
+
+      @media (min-width: $min) and (max-width: $max) {
+        width: 40px;
+        height: 3px;
+      }
+    }
+
+    & .top {
+      margin-bottom: 10px;
+    }
+
+    & .top,
+    & .bottom {
+      transition: $allTrans;
+    }
+  }
+}
+
+.show {
+  & .line {
+    width: 27px !important;
+  }
+  & .top {
+    transform: rotate(45deg);
+    margin-bottom: 0 !important;
+    transition: $allTrans;
+  }
+
+  & .bottom {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -2px;
+    transition: $allTrans;
+  }
+}
+
+.nav__background.show {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(48 9 97 / 30%);
+  top: 0;
+  left: 0;
+  z-index: -10;
+  backdrop-filter: blur(7.5px);
+  transition: 0.4s;
+}
+
+.nav__background.hide {
+  background: rgba(48 9 97 / 0%);
+  backdrop-filter: blur(7.5px);
+  transition: 0.4s;
+}
+
+@media (min-width: $min) and (max-width: $max) {
+  .nav__mobile-hide {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 6rem 2rem 0;
+    transition: 0.4s;
+    transition: right 0.4s ease-in-out;
+  }
+
+  .nav__mobile-show {
+    transition: right 0.4s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $darkBlue;
+    padding: 20px;
+    width: calc(100% - 20px);
+
+    & button {
+      margin-left: 0;
+    }
+  }
+}
