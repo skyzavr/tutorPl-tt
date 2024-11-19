@@ -1,0 +1,121 @@
+.mainScreen {
+  background-color: $dark;
+  position: relative;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0 60px;
+
+  & .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+
+    & .wrapper__main {
+      display: flex;
+      flex-direction: row;
+      padding: 100px 0;
+
+      & > div:first-child {
+        width: 90%;
+
+        @media (min-width: $min) and (max-width: 1440px) {
+          width: auto;
+        }
+      }
+
+      @media (min-width: $min) and (max-width: 1440px) {
+        padding: 0;
+        align-items: center;
+      }
+
+      & .wrapper__image {
+        max-width: 860px;
+
+        min-width: 320px;
+        & img {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: $min) and (max-width: 1440px) {
+        flex-direction: column;
+      }
+    }
+
+    & .mainScreen__title {
+      font: $headerBigRegular;
+      max-width: 717px;
+      color: white;
+      z-index: 10;
+      position: relative;
+
+      @media (min-width: $min) and (max-width: 1440px) {
+        font: $headerSmallRegular;
+        text-align: center;
+      }
+
+      & span {
+        font: $headerBigBold;
+
+        @media (min-width: $min) and (max-width: 1440px) {
+          font: $headerSmallBold;
+        }
+      }
+    }
+
+    & .mainScreen__text {
+      color: $gray;
+      font: $body;
+      width: 70%;
+      margin: 40px 0 80px;
+
+      @media (min-width: $min) and (max-width: 1440px) {
+        font: $bodySmall;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+
+    & .wrapper__mobile--group {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+
+      @media (min-width: $min) and (max-width: 1440px) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    & .wrapper__fullScreen--group {
+      @media (min-width: $min) and (max-width: 1440px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.blurCircle {
+  width: 415px;
+  height: 415px;
+  border-radius: 50%;
+  background: linear-gradient(
+    170.98deg,
+    rgba(95, 56, 255, 0.35) 25.59%,
+    rgba(255, 14, 222, 0.35) 100.44%
+  );
+  filter: blur(86px);
+  transform: rotate(11.97deg);
+  position: absolute;
+  top: -300px;
+
+  @media (min-width: $min) and (max-width: $max) {
+    width: 340px;
+    height: 240px;
+    top: -100px;
+    left: -100px;
+  }
+}
