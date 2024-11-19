@@ -24,6 +24,10 @@ const onToggleMenuButton = (menu: Element) => {
     : replaceClass(navBgr, 'show', 'hide');
 
   menu.classList.toggle('show');
+
+  navPanel.classList.contains('nav__mobile-hide')
+    ? (document.body.style.overflow = 'auto')
+    : (document.body.style.overflow = 'hidden');
 };
 
 export default onToggleMenuButton;
