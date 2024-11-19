@@ -1,0 +1,31 @@
+.modalWrapper {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 210;
+  transition: 0.3s all;
+}
+.overlay {
+  background-color: rgb(48 9 97/30%);
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  transition: 0.3s all;
+}
+.overlay:hover {
+  cursor: pointer;
+  background-color: rgb(48 9 97/70%);
+}
+.modalWrapper.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
