@@ -1,0 +1,93 @@
+.cardSection {
+  // main section
+  background-color: $white;
+  margin: 70px 0;
+
+  //section wrapper
+  & .cards {
+    background-image: url('/img/bgr.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-width: 1280px;
+    padding: 80px 0;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+
+    & .cards__title {
+      font: $h2Big;
+      color: $white;
+      text-align: center;
+
+      @media (min-width: $min) and (max-width: $max) {
+        font: $h2Small;
+      }
+    }
+
+    //cards wrapper
+    & .cards__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 650px;
+      margin: 70px auto;
+      gap: 50px;
+      z-index: 10;
+      position: relative;
+    }
+
+    //blur  circles
+    & .card__circle {
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    & .middle {
+      width: 22px;
+      height: 22px;
+      left: 50px;
+      top: 150px;
+      z-index: 10;
+
+      @media (min-width: 560px) {
+        width: 56px;
+        height: 56px;
+        top: 50px;
+      }
+
+      @media (min-width: 756px) {
+        left: 150px;
+      }
+    }
+
+    & .bottom {
+      width: 62px;
+      height: 62px;
+      filter: blur(12px);
+      position: absolute;
+      border: -100px;
+      bottom: 100px;
+      right: 100px;
+
+      @media (min-width: 420px) {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
+  & .top {
+    border-radius: 50%;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: 30px;
+    top: -50px;
+
+    @media (min-width: 620px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
